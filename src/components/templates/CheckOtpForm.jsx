@@ -6,7 +6,6 @@ import { getProfile } from "src/services/user";
 import { setCookie } from "utils/cookie";
 import styles from "./CheckOtpForm.module.css";
 
-
 function CheckOtpForm({ code, setCode, mobile, setStep }) {
   const navigate = useNavigate();
   const queryKey = ["profile"];
@@ -35,7 +34,7 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
         onChange={(e) => setCode(e.target.value)}
       />
       <button type="submit">ورود</button>
-      <button onClick={() => setStep(1)} className={styles.backButton}>
+      <button onClick={() => setStep(1)} className={styles.outlined + " outlined"}>
         تغییر شماره موبایل
       </button>
     </form>

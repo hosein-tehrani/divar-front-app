@@ -5,7 +5,7 @@
   flex-direction: column;
   margin-top: 100px;
   border: 1px solid silver;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   padding: 30px;
 }
 
@@ -19,19 +19,8 @@
   font-size: 0.8rem;
   margin-bottom: 20px;
 }
-.form input {
-  margin: 10px 0 20px;
-  padding: 5px;
-  border: 1px solid silver;
-  border-radius: 5px;
-}
 
 .form button {
   width: 120px;
   padding: 5px 10px;
-  border: none;
-  background-color: #a62626;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
 }
