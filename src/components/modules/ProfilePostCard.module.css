@@ -4,7 +4,7 @@
   border-radius: var(--border-radius);
   margin: 10px 0;
   padding: 5px;
-  border: 2px solid #eaeaea;
+  border: 2px solid var(--border-color);
 }
 
 .post h5 {
@@ -21,7 +21,7 @@
   margin-left: 30px;
 }
 .post div {
-    width: 100%;
+  width: 100%;
 }
 .post p {
   font-size: 0.9rem;

@@ -14,5 +14,15 @@ const getCookie = (cookieName) => {
   if (cookieSTR) return cookieSTR.split("=")[1];
   else return "";
 };
+const deleteCookies = (tokens) => {
+  const pastDate = new Date();
+  pastDate.setMonth(pastDate.getMonth() - 1); // 1 ماه پیش
 
-export { setCookie, getCookie };
+  document.cookie.split(";").forEach((c) => {
+    const eqPos = c.indexOf("=");
+    const name = eqPos > -1 ? c.substr(0, eqPos).trim() : c;
+    document.cookie = `${name}=;expires=${pastDate.toUTCString()};path=/`;
+  });
+};
+
+export { setCookie, getCookie, deleteCookies };
