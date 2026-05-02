@@ -5,20 +5,12 @@
   padding-bottom: 5px;
 }
 
-.form input {
+.form input,.form select,.form textarea {
   display: block;
   width: 300px;
   margin-bottom: 30px;
 }
-.form select {
-  display: block;
-  width: 300px;
-  margin-bottom: 30px;
-}
-.form select option img {
-  display: block;
-  width: 10px;
-}
+
 .form p {
   display: block;
   width: 300px;

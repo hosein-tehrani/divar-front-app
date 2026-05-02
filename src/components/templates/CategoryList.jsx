@@ -6,7 +6,7 @@ import Loader from "components/modules/Loader";
 
 function CategoryList() {
   const queryKey = ["categories"];
-  const { data, isLoading, fetch } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey,
     queryFn: getCategories,
   });
@@ -28,7 +28,6 @@ function CategoryList() {
             slug={cat.slug}
             id={cat._id}
             icon={cat.icon}
-            catRemoved={fetch}
           />
         ))}
     </div>

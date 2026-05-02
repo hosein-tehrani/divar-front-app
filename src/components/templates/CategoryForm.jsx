@@ -2,12 +2,22 @@ import React, { useState } from "react";
 import styles from "./CategoryForm.module.css";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addCategory } from "services/admin";
+import toast from "react-hot-toast";
 function CategoryForm() {
   const queryClient = useQueryClient();
   const [form, setForm] = useState({ name: "", slug: "", icon: "" });
   const [customError, setCustomError] = useState("");
   const { data, isPending, error, mutate } = useMutation({
     mutationFn: addCategory,
+    onSuccess: (response) => {
+      console.log(response);
+      queryClient.invalidateQueries({ queryKey: ["categories"] });
+      toast.success(response.data.message);
+    },
+    onError: (error) => {
+      toast.error("مشکلی پیش آمده است!");
+      console.log("error: ", error);
+    },
   });
 
   const formChangeHandler = (event) => {
@@ -20,12 +30,7 @@ function CategoryForm() {
       setCustomError("اطلاعات را کامل وارد کنید");
       return;
     }
-    mutate(form, {
-      onSuccess: (data) => {
-        setForm({ name: "", slug: "", icon: "" });
-        queryClient.invalidateQueries({ queryKey: ["categories"] });
-      },
-    });
+    mutate(form);
   };
   return (
     <form
@@ -34,11 +39,7 @@ function CategoryForm() {
       className={styles.form}
     >
       <h3>دسته بندی جدید</h3>
-      {error && <p className={styles.error}>{error.message}</p>}
       {customError && <p className={styles.error}>{customError}</p>}
-      {data?.status === 201 && (
-        <p className={styles.success}>ثبت دسته بندی با موفقیت انجام شد</p>
-      )}
       <label htmlFor="name">نام</label>
       <input type="text" name="name" id="name" />
       <label htmlFor="slug">اسلاگ</label>
