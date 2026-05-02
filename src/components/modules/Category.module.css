@@ -1,0 +1,29 @@
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid silver;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 2px solid #eaeaea;
+}
+.category div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.category h5 {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  width: 120px;
+}
+.category p {
+  text-align: left;
+  color: var(--primary);
+  margin-left: 10px;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  width: 120px;
+}
