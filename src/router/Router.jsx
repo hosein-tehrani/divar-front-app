@@ -6,6 +6,7 @@ import HomePage from "pages/HomePage";
 import DashboardPage from "pages/DashboardPage";
 import AdminPage from "pages/AdminPage";
 import PageNotFound from "pages/404";
+import Post from "pages/Post";
 
 import { getProfile } from "services/user";
 import Loader from "components/modules/Loader";
@@ -19,6 +20,7 @@ function Router() {
   return (
     <Routes>
       <Route index element={<HomePage />} />
+      <Route path="/post/:id" element={<Post />} />
       <Route
         path="/dashboard"
         element={data ? <DashboardPage /> : <Navigate to="/auth" />}
