@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.container .imageBox {
+  flex: 0 0 50%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+.container .image {
+  width: 100%;
+}
+.container .info {
+  min-width: 300px;
+  flex: 0 0 45%;
+}
+
+.container .info h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.container .info h2 {
+  font-size: 1rem;
+  color: gray;
+  margin-bottom: 15px;
+}
+.container .info h3 {
+  margin: 20px 0;
+  border-bottom: 3px solid var(--primary);
+  width: fit-content;
+  padding-bottom: 5px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons svg {
+  cursor: pointer;
+}
+.userBox {
+  margin-top: 15px;
+}
+.userMobile {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  color: gray;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.userMobile .mobile {
+  display: flex;
+  align-items: center;
+}
+.userMobile .mobile span {
+  color: var(--primary);
+  margin: 0 5px;
+}
+.userMobile .mobile svg {
+  cursor: pointer;
+}
+.warning {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f0faff;
+  border-radius: var(--border-radius);
+  color: gray;
+}
+.warning div {
+  font-size: 1rem;
+  padding: 5px 0;
+  line-height: 1.5rem;
+}
+.content {
+  line-height: 2.5rem;
+}

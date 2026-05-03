@@ -1,6 +1,5 @@
 import HomePostCard from "components/modules/HomePostCard";
 import styles from "./Main.module.css";
-import { useState } from "react";
 import { ImSearch } from "react-icons/im";
 
 function Main({ data, selectedCategory, search, setSearch, searchHandler }) {

@@ -1,5 +1,6 @@
 .post {
   width: 330px;
+  min-width: 330px;
   display: flex;
   justify-content: space-between;
   border-radius: var(--border-radius);
