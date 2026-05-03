@@ -1,0 +1,28 @@
+.sidebar {
+  margin-top: 30px;
+  width: 200px;
+}
+.all {
+  margin-right: 30px !important;
+}
+.sidebar li {
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+
+  border-radius: var(--border-radius);
+  padding: 5px;
+}
+.sidebar li span {
+  font-weight: 200;
+  margin-right: 10px;
+  color: grey;
+}
+.sidebar li.selected {
+  background-color: rgba(165, 42, 42, 0.384);
+}
+.sidebar li.selected span {
+  font-weight: 300;
+  margin-right: 10px;
+  color: var(--primary);
+}

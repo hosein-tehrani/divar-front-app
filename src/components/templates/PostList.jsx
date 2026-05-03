@@ -1,14 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import styles from "./PostList.module.css";
 import Loader from "components/modules/Loader";
-import { getPosts } from "src/services/post";
+import { getUserPosts } from "src/services/post";
 import ProfilePostCard from "../modules/ProfilePostCard";
 
 function PostList() {
   const queryKey = ["my-posts"];
   const { data, isLoading } = useQuery({
     queryKey,
-    queryFn: getPosts,
+    queryFn: getUserPosts,
   });
   console.log(data);
 

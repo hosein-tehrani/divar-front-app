@@ -25,7 +25,8 @@ const addPost = async (data) => {
     throw error;
   }
 };
-const getPosts = () => api.get("post/my");
+const getUserPosts = () => api.get("post/my");
 const removePost = (id) => api.delete(`post/delete/${id}`);
+const getAllPosts = () => api.get("");
 
-export { addPost, getPosts, removePost };
+export { addPost, getUserPosts, removePost, getAllPosts };

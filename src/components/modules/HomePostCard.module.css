@@ -1,0 +1,28 @@
+.post {
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: var(--border-radius);
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+}
+.post:hover img {
+  transform: scale(1.1);
+}
+
+.post img {
+  width: 150px;
+  height: 130px;
+  border-radius: var(--border-radius);
+  transition: all 0.3s;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info div {
+  color: gray;
+  font-size: 0.9rem;
+}
