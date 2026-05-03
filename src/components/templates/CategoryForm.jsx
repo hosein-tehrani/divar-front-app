@@ -10,7 +10,6 @@ function CategoryForm() {
   const { data, isPending, error, mutate } = useMutation({
     mutationFn: addCategory,
     onSuccess: (response) => {
-      console.log(response);
       queryClient.invalidateQueries({ queryKey: ["categories"] });
       toast.success(response.data.message);
     },

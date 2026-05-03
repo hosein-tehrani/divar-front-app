@@ -10,7 +10,6 @@ function CategoryList() {
     queryKey,
     queryFn: getCategories,
   });
-  console.log(data);
 
   {
     isLoading && <Loader />;

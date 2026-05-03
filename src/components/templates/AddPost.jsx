@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { addPost } from "src/services/post";
 import { getCategories } from "src/services/admin";
 import toast from "react-hot-toast";
@@ -18,6 +18,7 @@ function AddPost() {
   const [customError, setCustomError] = useState("");
 
   //---------react query and mutations----------
+  const queryClient = useQueryClient();
   const { data } = useQuery({
     queryKey,
     queryFn: getCategories,
@@ -25,6 +26,7 @@ function AddPost() {
   const { isPending, error, mutate } = useMutation({
     mutationFn: addPost,
     onSuccess: (response) => {
+      queryClient.invalidateQueries({ queryKey: ["my-posts"] });
       toast.success(response.message);
     },
     onError: (error) => {

@@ -10,7 +10,6 @@ function PostList() {
     queryKey,
     queryFn: getUserPosts,
   });
-  console.log(data);
 
   {
     isLoading && <Loader />;
