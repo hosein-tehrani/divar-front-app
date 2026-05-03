@@ -76,4 +76,10 @@
 }
 .content {
   line-height: 2.5rem;
+  text-align: justify;
+}
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column-reverse;
+  }
 }
