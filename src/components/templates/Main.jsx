@@ -4,7 +4,7 @@ import { ImSearch } from "react-icons/im";
 
 function Main({ data, selectedCategory, search, setSearch, searchHandler }) {
   return (
-    <div>
+    <div className={styles.main}>
       <div className={styles.searchBox}>
         <input
           type="text"
