@@ -18,7 +18,7 @@ function ProfilePostCard({ options, createdAt, amount, images, id }) {
     });
   };
   return (
-    <Link to={`post/${id}`}>
+    <Link to={`/post/${id}`}>
       <div className={styles.post}>
         <img src={`${import.meta.env.VITE_API_BASEURL}${images}`} alt={title} />
         <div>

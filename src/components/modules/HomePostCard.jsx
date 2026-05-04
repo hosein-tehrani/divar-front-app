@@ -5,7 +5,7 @@ function HomePostCard({ options, createdAt, amount, images, id }) {
   const { title, city } = options;
 
   return (
-    <Link to={`post/${id}`}>
+    <Link to={`/post/${id}`}>
       <div className={styles.post}>
         <div className={styles.info}>
           <p>{title}</p>

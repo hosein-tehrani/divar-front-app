@@ -7,6 +7,7 @@ import { MdOutlineFileCopy } from "react-icons/md";
 import toast from "react-hot-toast";
 import { e2p } from "src/utils/numbers";
 import { SlShare } from "react-icons/sl";
+import { Helmet } from "react-helmet";
 function Post() {
   const { id } = useParams();
   const [details, setDetails] = useState({});
@@ -44,6 +45,9 @@ function Post() {
   };
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>دیوار | {title}</title>
+      </Helmet>
       <div className={styles.info}>
         <h1>{title}</h1>
         <h2>
