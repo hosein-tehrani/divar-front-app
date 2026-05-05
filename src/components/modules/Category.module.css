@@ -27,3 +27,8 @@
   line-height: 0.9rem;
   width: 120px;
 }
+@media screen and (max-width: 450px) {
+  .category p {
+    display: none;
+  }
+}

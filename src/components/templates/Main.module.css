@@ -46,3 +46,8 @@
   margin: 50px 10px 70px;
   width: 100%;
 }
+@media screen and (max-width: 650px) {
+  .searchBox {
+    width: 80%;
+  }
+}

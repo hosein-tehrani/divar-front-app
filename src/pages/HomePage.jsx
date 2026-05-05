@@ -8,6 +8,7 @@ import { getCategories } from "src/services/admin";
 import { useSearchParams } from "react-router-dom";
 import { filterPosts, searchPosts, setQueryObject } from "src/utils/helper";
 const style = { display: "flex" };
+import styles from "./HomePage.module.css"
 
 function HomePage() {
   // ---------variables-----------
@@ -59,7 +60,7 @@ function HomePage() {
     setQuery((query) => setQueryObject(query, { category }));
   };
   return (
-    <div style={style}>
+    <div className={styles.container}>
       {loadingPosts || loadingCategories ? (
         <Loader />
       ) : (

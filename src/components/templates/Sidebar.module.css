@@ -8,11 +8,11 @@
 }
 .sidebar li {
   display: flex;
+  align-items: center;
   margin: 20px 0;
   cursor: pointer;
-
   border-radius: var(--border-radius);
-  padding: 5px;
+  padding: 8px;
 }
 .sidebar li span {
   font-weight: 200;
@@ -26,4 +26,21 @@
   font-weight: 300;
   margin-right: 10px;
   color: var(--primary);
+}
+@media screen and (max-width: 650px) {
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+  }
+  .sidebar ul {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+  .sidebar li {
+    width: 150px;
+    min-width: 150px;
+    border: 1px solid var(--border-color);
+    margin: 10px;
+  }
 }

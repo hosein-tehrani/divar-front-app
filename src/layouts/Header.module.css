@@ -70,3 +70,16 @@
   width: 100vw;
   height: 100vh;
 }
+@media screen and (max-width: 650px) {
+  .header div {
+    flex-direction: column;
+  }
+  .left {
+    flex-direction: column-reverse !important;
+    justify-content: start;
+  }
+  .dropDown {
+    left: 0;
+    right: unset;
+  }
+}

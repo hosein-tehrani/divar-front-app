@@ -31,7 +31,7 @@ function Header() {
           <p>تهران</p>
         </span>
       </div>
-      <div>
+      <div className={styles.left}>
         {userInfo?.role ? (
           <div className={styles.dropDownButton}>
             <span onClick={() => setShowDrop((prev) => !prev)}>
