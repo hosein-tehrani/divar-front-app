@@ -17,3 +17,6 @@
 .outlined {
   width: 170px !important;
 }
+.codeNotif {
+  color: var(--primary);
+}
